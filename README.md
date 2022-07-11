@@ -3,7 +3,11 @@
 This README will detail how to use the python scripts used for analyses in "Expansion of the RNAStructuromeDB to include secondary structural data spanning the human protein coding transcriptome".
 additional descriptions of the scripts can be found in the script headers.
 
-The script transcriptome_metrics was used to analyses ScanFold generated thermodynamic metrics of every transcript in the dataset.
+The script HTP_dG_ZScore.pl was used to analyze the sequences of cis-regulatory elements in the Rfam database and determine their z-scores. 
+To successfully run the script, it it needs to be within a directory which contains the target fasta file to be analyzed. The input file is a single fasta with any number of entries and the input value is the number of randomizations needed.
+The script functions in a similar way to ScanFold-Scan to generate an output file containing a MFE, z-score, and p-value for each entry in the fasta file.
+
+The script transcriptome_metrics was used to analyze ScanFold generated thermodynamic metrics of every transcript in the dataset.
 To successfully run the script, it needs to be within a directory which contains all ScanFold output sub-directories that will be analyzed. No input files are needed.
 The script will iteratively enter each sub-directory and it will find the .out file and .gff3 file produced by ScanFold.
 The script will then pull relevant data out of these files to analyze and organize for output.
